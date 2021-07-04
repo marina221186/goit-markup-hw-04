@@ -47,8 +47,13 @@ body {
 }
 
 /*---Header---*/
+
 .box {
+  display: flex;
+}
+.box-work {
   display: block;
+  /* margin-right: 70px;*/
 }
 .page-header-container {
   display: flex;
@@ -120,12 +125,14 @@ body {
 }
 
 .info-address {
+  display: flex;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  text-align: left;
+  /* text-align: left;*/
   color: #757575;
+  fill: #757575;
   padding-top: 32px;
   padding-bottom: 32px;
 }
@@ -133,18 +140,41 @@ body {
 .info-address:focus {
   color: var(--accent-color);
 }
+.header-icon-web {
+  height: 12px;
+  width: 16px;
+  left: 1052px;
+  top: 34px;
+  border-radius: 0px;
+  margin-right: 10px;
+  fill: currentColor;
+}
+
+.header-icon-mob {
+  height: 16px;
+  width: 10px;
+  left: 1243px;
+  top: 32px;
+  border-radius: 0px;
+  margin-right: 10px;
+}
 /*Шапка*/
 .hat-team {
-  background-color: #2f303a;
+  background-color: #c4c4c4;
   max-width: 1600px;
   padding-top: 200px;
   padding-bottom: 200px;
   text-align: center;
-  /*margin-bottom: 94px;*/
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
+    url(../imges/hero/bg.jpg);
+  )background-size: cover;
 }
 
 .hat-item {
-  background-color: #2f303a;
+  /*background-color: #2f303a;*/
   text-align: center;
 }
 
@@ -209,6 +239,12 @@ body {
   width: 270px;
 }
 /*Чем мы занимаемся*/
+.jpg-name {
+  width: 270px;
+  border-radius: 4px;
+  margin-bottom: 30px;
+}
+
 .work-item {
   padding-top: 94px;
   padding-bottom: 94px;
@@ -236,11 +272,43 @@ body {
 }
 
 /*Наша команда*/
+.footer-block {
+  margin-right: 70px;
+}
+
+.web-icon {
+  height: 44px;
+  width: 44px;
+  border-radius: 100%;
+
+  background-color: #ffffff;
+  background-position: center;
+  background-repeat: no-repeat;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.web-icon:hover,
+.web-icon:focus {
+  background-color: var(--accent-color);
+}
+.web-icon.current {
+  color: var(--accent-color);
+}
+.web-item {
+  display: flex;
+  width: 206px;
+  justify-content: space-between;
+  padding-top: 16px;
+  padding-bottom: 30px;
+}
+.web-icon-top {
+  height: 20px;
+  width: 20px;
+  border-radius: 50%px;
+}
 .our-team {
   background-color: #f5f4fa;
   margin-bottom: 29px;
   padding-top: 94px;
-  /* padding-bottom: 94px;*/
 }
 .team-person {
   display: flex;
@@ -285,16 +353,76 @@ body {
   padding-left: 32px;
   padding-right: 32px;
 }
+/*Наши клиенты*/
+.our-client {
+  margin-bottom: 94px;
+}
+.client-link {
+  height: 92px;
+  width: 170px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
+}
+.client-link:not(:last-child) {
+  margin-right: 30px;
+}
+.client-item:hover,
+.client-item:focus {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+.client-name {
+  font-size: 36px;
+  line-height: 1.17;
+  letter-spacing: 0.03em;
+  text-align: center;
+  color: var(--text-accent-color);
+  margin-bottom: 50px;
+}
+.client-type {
+  display: flex;
+}
+
+.client-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 60px;
+  width: 106px;
+  margin: 16px 32px;
+}
+
+.client-svg {
+  background-position: 16px 32px;
+  height: 41px;
+  justify-content: center;
+  align-items: center;
+  padding-left: 30px;
+}
+.client-svg-left {
+  padding-left: 10px;
+}
+
 /*Footer*/
+.footer-link-box {
+  margin-right: 70px;
+}
 .footer-link {
   background: #2f303a;
   padding: 60px 0;
+  display: flex;
 }
 .footer-link .logo-link {
   margin-bottom: 20px;
   display: block;
 }
-
+.footer-name {
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #ffff;
+}
 .logo {
   font-family: var(--secondary-font);
   font-size: 26px;
@@ -323,8 +451,15 @@ body {
 .letter-footer {
   color: #ffffff;
 }
+.web-item {
+  padding-top: 20px;
+}
+
 /*===========Portfolio===========*/
 /*button filters*/
+.footer-container {
+  display: flex;
+}
 .all-section {
   padding-top: 86px;
   padding-bottom: 94px;
