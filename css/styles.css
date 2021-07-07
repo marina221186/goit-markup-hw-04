@@ -110,6 +110,7 @@ body {
 .menu-link:hover,
 .menu-link:focus {
   color: var(--accent-color);
+  fill: var(--accent-color);
 }
 .menu-link.current {
   color: var(--accent-color);
@@ -117,8 +118,8 @@ body {
 .menu-address {
   display: flex;
   margin-left: auto;
-  padding-top: 32px;
-  padding-bottom: 32px;
+  /*padding-top: 32px;
+  padding-bottom: 32px;*/
 }
 .menu-info-type:not(:last-child) {
   margin-right: 50px;
@@ -130,7 +131,7 @@ body {
   font-size: 14px;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  /* text-align: left;*/
+  align-items: center;
   color: #757575;
   fill: #757575;
   padding-top: 32px;
@@ -157,6 +158,7 @@ body {
   top: 32px;
   border-radius: 0px;
   margin-right: 10px;
+  fill: currentColor;
 }
 /*Шапка*/
 .hat-team {
@@ -241,6 +243,11 @@ body {
 /*Чем мы занимаемся*/
 .jpg-name {
   width: 270px;
+  height: 120px;
+  background-color: #f5f4fa;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   border-radius: 4px;
   margin-bottom: 30px;
 }
@@ -280,6 +287,9 @@ body {
   height: 44px;
   width: 44px;
   border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   background-color: #ffffff;
   background-position: center;
@@ -290,6 +300,14 @@ body {
 .web-icon:focus {
   background-color: var(--accent-color);
 }
+.web-icon:hover .web-icon-top,
+.web-icon:focus .web-icon-top {
+  fill: var(--accent-color);
+}
+.web-icon:hover .web-icon-top-footer,
+.web-icon:focus .web-icon-top-footer {
+  fill: #ffffff;
+}
 .web-icon.current {
   color: var(--accent-color);
 }
@@ -297,13 +315,13 @@ body {
   display: flex;
   width: 206px;
   justify-content: space-between;
-  padding-top: 16px;
-  padding-bottom: 30px;
+  padding-top: 20px;
 }
 .web-icon-top {
   height: 20px;
   width: 20px;
   border-radius: 50%px;
+  fill: #afb1b8;
 }
 .our-team {
   background-color: #f5f4fa;
@@ -338,7 +356,6 @@ body {
   letter-spacing: 0.03em;
   text-align: center;
   color: #757575;
-  /*margin-bottom: 16px;*/
 }
 .team-picture {
   height: 260px;
@@ -368,8 +385,11 @@ body {
 }
 .client-item:hover,
 .client-item:focus {
-  background-color: var(--accent-color);
   border-color: var(--accent-color);
+}
+.client-item:hover .client-svg,
+.client-item:focus .client-svg {
+  fill: var(--accent-color);
 }
 .client-name {
   font-size: 36px;
@@ -389,7 +409,10 @@ body {
   align-items: center;
   height: 60px;
   width: 106px;
-  margin: 16px 32px;
+  height: 92px;
+  width: 170px;
+  border: 1px solid #afb1b8;
+  border-radius: 4px;
 }
 
 .client-svg {
@@ -397,10 +420,7 @@ body {
   height: 41px;
   justify-content: center;
   align-items: center;
-  padding-left: 30px;
-}
-.client-svg-left {
-  padding-left: 10px;
+  fill: #afb1b8;
 }
 
 /*Footer*/
@@ -454,7 +474,13 @@ body {
 .web-item {
   padding-top: 20px;
 }
-
+.icon-footer {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+}
+.web-icon-top-footer {
+  fill: #ffffff;
+}
 /*===========Portfolio===========*/
 /*button filters*/
 .footer-container {
@@ -506,6 +532,11 @@ body {
   margin-left: 30px;
   margin-top: 30px;
 }
+.project-itam:hover,
+.project-itam:focus {
+  box-shadow: 0px 4px 4px 0px, rgba(0, 0, 0, 0.25);
+}
+
 .project-box {
   padding-left: 24px;
   padding-right: 24px;
